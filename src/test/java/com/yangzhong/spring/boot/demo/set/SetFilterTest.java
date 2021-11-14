@@ -18,6 +18,8 @@ public class SetFilterTest {
         set.add("4");
         set.add("5");
         set.add("-1");
+        set.add(null);
+        set.add(null);
         System.out.println("处理前：" + set);
         set = set.stream().filter(str -> !str.equals("-1")).collect(Collectors.toSet());
         System.out.println("处理后：" + set);

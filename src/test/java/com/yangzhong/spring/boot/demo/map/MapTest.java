@@ -2,6 +2,7 @@ package com.yangzhong.spring.boot.demo.map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @Author yangzhong
@@ -10,8 +11,12 @@ import java.util.Map;
  */
 public class MapTest {
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
-        map.putAll(new HashMap<>(5));
-        System.out.println(map.size());
+        Map<Long, Long> splitSkuIdMap = new HashMap<>();
+        // splitSkuIdMap.put(1L, 1L);
+        splitSkuIdMap.put(2L, null);
+        splitSkuIdMap.put(null, 3L);
+
+        Map<Long, Long> collect = splitSkuIdMap.entrySet().stream().filter(e -> e.getKey() != null && e.getValue() != null).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(collect);
     }
 }
