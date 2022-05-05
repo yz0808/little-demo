@@ -7,8 +7,8 @@ package com.yangzhong.spring.boot.demo.integer;
  */
 public class IntegerTest {
     public static void main(String[] args) {
-        Integer a = 127;
-        Integer b = 127;
-        System.out.println(a == b);
+        int a = 1000;
+        int b = 20;
+        System.out.println(a / b);
     }
 }
