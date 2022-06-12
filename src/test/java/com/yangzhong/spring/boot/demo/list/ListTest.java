@@ -14,15 +14,16 @@ public class ListTest {
 
     public static void main(String[] args) {
         // 交集
-        List<String> listA_01 = new ArrayList<String>(){{
+        List<String> listA_01 = new ArrayList<String>() {{
             add("A");
             add("D");
         }};
+        System.out.println(listA_01.get(100));
 
         listA_01.add(null);
         listA_01.add(null);
 
-        List<String> listB_01 = new ArrayList<String>(){{
+        List<String> listB_01 = new ArrayList<String>() {{
             add("B");
             add("C");
         }};

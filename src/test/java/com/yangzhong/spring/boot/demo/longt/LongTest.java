@@ -8,8 +8,12 @@ package com.yangzhong.spring.boot.demo.longt;
 public class LongTest {
 
     public static void main(String[] args) {
-
-        String str = "12345567 ";
+        Long DEFAULT_TENANT_ID = 1L;
+        String str = "12345567";
         System.out.println(Long.parseLong(str));
+
+        Long ll = 16L;
+        System.out.println(ll.toString());
+        System.out.println(DEFAULT_TENANT_ID.equals(ll));
     }
 }

@@ -10,9 +10,9 @@ import java.math.BigDecimal;
 public class BigDecimalTest {
 
     public static void main(String[] args) {
-        BigDecimal amount = new BigDecimal("-1.0098");
-        System.out.println("正负零：" + amount.signum());
-        System.out.println(amount.precision());
-        System.out.println(amount.scale());
+
+        BigDecimal b1 = new BigDecimal("1.0");
+        BigDecimal b2 = new BigDecimal("1.000");
+        System.out.println(b1.compareTo(b2) != 0);
     }
 }
