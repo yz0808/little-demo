@@ -1,3 +1,3 @@
-# spring-boot-demo
+# little-demo
 Demo
 user.name test1
