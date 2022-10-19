@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * @Description 描述
  */
 public class CaffeineTest {
-    private static Cache<String, String> cache = Caffeine.newBuilder()
+    private static final Cache<String, String> cache = Caffeine.newBuilder()
             .refreshAfterWrite(3, TimeUnit.SECONDS)
             .expireAfterWrite(5, TimeUnit.SECONDS)
             .maximumSize(10).build(new CacheLoader<String, String>() {
